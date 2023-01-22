@@ -25,4 +25,5 @@ body{
     border-radius: 50%;
     position: absolute;
     bottom: 100px;
+    right: calc(100% - 100px)
 }
