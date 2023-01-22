@@ -8,6 +8,7 @@ body{
     height: 100vh;
     position: relative;
     overflow: hidden;
+    background-color: #FFFAF0;
 }
 
 #ground {
@@ -16,4 +17,12 @@ body{
     background-color: #5F9EA0;
     position: absolute;
     bottom: 0;
+}
+#character {
+    width: 50px;
+    height: 50px;
+    background-color: #B0E0E6;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100px;
 }
