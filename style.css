@@ -8,31 +8,37 @@ body{
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background-color: #FFFAF0;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    background: url('https://cdn1.vectorstock.com/i/1000x1000/79/45/cartoon-mountain-landscape-in-sunset-background-vector-10207945.jpg');
+    background-size: 485px;
 }
 
 #ground {
     width: 100%;
-    height: 100px;
-    background-color: #5F9EA0;
+    height: 60px;
+    background-color: #696969;
     position: absolute;
     bottom: 0;
 }
 #character {
     width: 50px;
     height: 50px;
-    background-color: #B0E0E6;
+    background-color: #fc893d;
     border-radius: 50%;
     position: absolute;
-    bottom: 100px;
+    bottom: 60px;
     right: calc(100% - 100px)
 }
 
 .obstacle{
     width: 30px;
     height: 100px;
-    background-color: #D8BFD8;
+    background-color: #D2B48C;
     position: absolute;
-    bottom: 100px;
+    bottom: 60px;
     right: 0;
 }

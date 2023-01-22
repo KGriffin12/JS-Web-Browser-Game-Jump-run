@@ -44,6 +44,22 @@ function generateObstacle(){
     let obstacle = document.createElement('div');
     obstacle.setAttribute('class', 'obstacle');
     obstacles.appendChild(obstacle);
+
+    let obstacleRight = -30;
+    let obstacleBottom = 60;
+    let obstacleWidth = 30;
+    let obstacleHeight = Math.floor(Math.random()* 50) + 50;
+
+    function moveObstacle(){
+        obstacleRight += 5;
+        obstacle.style.right = obstacleRight + 'px';
+        obstacle.style.bottom = obstacleBottom + 'px';
+        obstacle.style.width = obstacleWidth + 'px';
+        obstacle.style.height = obstacleHeight + 'px';
+    }
+
+    let obstacleInterval = setInterval(moveObstacle, 20);
+    let obstacleTimeout =setTimeout(generateObstacle,800 );  
 }
 
 generateObstacle();
