@@ -25,6 +25,10 @@ function jump(){
         if(characterBottom >= groundHeight + 250){
             clearInterval(upTime);
             downTime = setInterval(() => {
+                if(characterBottom <= groundHeight + 10){
+                    clearInterval(downTime);
+                    isJumping = false;
+                }
                 characterBottom -= 10;
         character.style.bottom = characterBottom + 'px';
             },20);
@@ -34,6 +38,9 @@ function jump(){
         isJumping = true;
     },20);
 }
+
+
+
 
 function control(e){
     if (e.key === 'ArrowUp' || e.key == ''){
