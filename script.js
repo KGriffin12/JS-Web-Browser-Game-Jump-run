@@ -22,6 +22,9 @@ let downTime;
 function jump(){
     if(isJumping) return;
     upTime = setInterval(() => {
+        if(characterBottom >= groundHeight + 250){
+            clearInterval(upTime);
+        }
         characterBottom += 10;
         character.style.bottom = characterBottom + 'px';
         isJumping = true;
