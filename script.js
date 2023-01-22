@@ -39,8 +39,14 @@ function jump(){
     },20);
 }
 
+function generateObstacle(){
+    let obstacles = document.querySelector('.obstacles');
+    let obstacle = document.createElement('div');
+    obstacle.setAttribute('class', 'obstacle');
+    obstacles.appendChild(obstacle);
+}
 
-
+generateObstacle();
 
 function control(e){
     if (e.key === 'ArrowUp' || e.key == ''){

@@ -27,3 +27,12 @@ body{
     bottom: 100px;
     right: calc(100% - 100px)
 }
+
+.obstacle{
+    width: 30px;
+    height: 100px;
+    background-color: #D8BFD8;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+}
