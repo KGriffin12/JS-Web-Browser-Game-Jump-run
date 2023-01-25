@@ -18,6 +18,8 @@ let groundHeight = parseInt(window.getComputedStyle(ground).getPropertyValue('he
 let isJumping = false;
 let upTime;
 let downTime;
+let displayScore = document.getElementById('score');
+let score = 0;
 
 function jump(){
     if(isJumping) return;
@@ -38,6 +40,13 @@ function jump(){
         isJumping = true;
     },20);
 }
+
+function showScore(){
+    score++;
+    displayScore.innerText = score;
+}
+
+setInterval(showScore, 100);
 
 function generateObstacle(){
     let obstacles = document.querySelector('.obstacles');
@@ -60,7 +69,7 @@ function generateObstacle(){
         if(characterRight >= obstacleRight - characterWidth && characterRight <=
             obstacleRight + obstacleWidth && characterBottom <= obstacleBottom +
             obstacleHeight){
-                alert('Game Over!');
+                alert('Game Over! Your Score is: ' +score);
                 clearInterval(obstacleInterval);
                 clearTimeout(obstacleTimeout);
                 location.reload();
