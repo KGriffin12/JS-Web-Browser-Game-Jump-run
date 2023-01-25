@@ -37,7 +37,7 @@ To do:
 ## Acknowledgements
 Give credit here.
 -  https://www.keycode.info
-- 
+- https://releases.jquery.com/
 
 
 ## Contact
