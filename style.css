@@ -14,7 +14,7 @@ section{
     width: 100%;
     height: 100vh;
     background: url('https://cdn1.vectorstock.com/i/1000x1000/79/45/cartoon-mountain-landscape-in-sunset-background-vector-10207945.jpg');
-    background-size: 485px;
+    background-size: auto;
 }
 
 #ground {
@@ -27,7 +27,7 @@ section{
 #character {
     width: 50px;
     height: 50px;
-    background-color: #fc893d;
+    background-color: #f7b91c;
     border-radius: 50%;
     position: absolute;
     bottom: 60px;

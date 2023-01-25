@@ -45,21 +45,30 @@ function generateObstacle(){
     obstacle.setAttribute('class', 'obstacle');
     obstacles.appendChild(obstacle);
 
+    let randomTimeout = Math.floor(Math.random() * 1000) + 1000;
     let obstacleRight = -30;
     let obstacleBottom = 60;
     let obstacleWidth = 30;
     let obstacleHeight = Math.floor(Math.random()* 50) + 50;
-
+  
     function moveObstacle(){
         obstacleRight += 5;
         obstacle.style.right = obstacleRight + 'px';
         obstacle.style.bottom = obstacleBottom + 'px';
         obstacle.style.width = obstacleWidth + 'px';
         obstacle.style.height = obstacleHeight + 'px';
+        if(characterRight >= obstacleRight - characterWidth && characterRight <=
+            obstacleRight + obstacleWidth && characterBottom <= obstacleBottom +
+            obstacleHeight){
+                alert('Game Over!');
+                clearInterval(obstacleInterval);
+                clearTimeout(obstacleTimeout);
+                location.reload();
+            }
     }
 
     let obstacleInterval = setInterval(moveObstacle, 20);
-    let obstacleTimeout =setTimeout(generateObstacle,800 );  
+    let obstacleTimeout =setTimeout(generateObstacle,1160);  
 }
 
 generateObstacle();
