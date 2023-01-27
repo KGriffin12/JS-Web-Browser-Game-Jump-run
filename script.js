@@ -27,15 +27,15 @@ function jump(){
         if(characterBottom >= groundHeight + 250){
             clearInterval(upTime);
             downTime = setInterval(() => {
-                if(characterBottom <= groundHeight + 11){
+                if(characterBottom <= groundHeight + 15){
                     clearInterval(downTime);
                     isJumping = false;
                 }
-                characterBottom -= 11;
+                characterBottom -= 15;
         character.style.bottom = characterBottom + 'px';
             },20);
         }
-        characterBottom += 11;
+        characterBottom += 15;
         character.style.bottom = characterBottom + 'px';
         isJumping = true;
     },20);
