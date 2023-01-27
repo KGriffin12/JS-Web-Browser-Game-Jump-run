@@ -38,6 +38,7 @@ To do:
 Give credit here.
 -  https://www.keycode.info
 - https://releases.jquery.com/
+- ritaly/README-cheatsheet Used template for README.md
 
 
 ## Contact
